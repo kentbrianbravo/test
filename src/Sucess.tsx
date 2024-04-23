@@ -130,6 +130,8 @@ const Sucess = ({navigation}: SucessProps) => {
   );
 };
 
+//change test
+
 const style = StyleSheet.create({
   container: {
     marginHorizontal: 24,
