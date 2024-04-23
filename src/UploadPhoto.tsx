@@ -98,7 +98,7 @@ const UploadPhoto = ({navigation}: UploadPhotoProps) => {
           <Text style={style.photoCounter}>{uploadedPhotos[0].text}</Text>
           <View style={{flex: 1}} />
           <TouchableOpacity style={style.uploadBtn}>
-            <Text style={style.uploadText}>Upload photo</Text>
+            <Text style={style.uploadText}>Upload Items</Text>
           </TouchableOpacity>
         </View>
         <View>
