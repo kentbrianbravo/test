@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useCallback} from 'react';
 import {StackScreenProps} from '@react-navigation/stack';
 import {RootStackParamList} from './App';
 import {
@@ -11,6 +11,8 @@ import {
 import {ScrollView, TouchableOpacity} from 'react-native-gesture-handler';
 import {SvgXml} from 'react-native-svg';
 import {Platform} from 'react-native';
+import { useAndroidBackHandler } from "react-navigation-backhandler";
+
 
 const windowHeight = Dimensions.get('screen').height;
 
@@ -68,6 +70,24 @@ const Sucess = ({navigation}: SucessProps) => {
   const bathroom = {
     defaultBathroom: 2,
   };
+  
+  const onBackPress = useCallback(() => {
+    /*
+     *   Returning `true` denotes that we have handled the event,
+     *   and react-navigation's lister will not get called, thus not popping the screen.
+     *
+     *   Returning `false` will cause the event to bubble up and react-navigation's listener will pop the screen.
+     * */
+
+    if (navigation.isFocused()) {
+      navigation.navigate('Home')
+      return true
+    }
+
+    return false
+  }, [navigation])
+
+  useAndroidBackHandler(onBackPress)
 
   return (
     <ScrollView nestedScrollEnabled={true}>
@@ -129,6 +149,8 @@ const Sucess = ({navigation}: SucessProps) => {
     </ScrollView>
   );
 };
+
+//change test
 
 const style = StyleSheet.create({
   container: {
