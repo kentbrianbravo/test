@@ -88,8 +88,6 @@ const Home = ({navigation}: HomeProps) => {
   );
 };
 
-//Test
-
 const style = StyleSheet.create({
   container: {
     marginHorizontal: 24,
