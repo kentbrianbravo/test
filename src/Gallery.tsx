@@ -349,7 +349,7 @@ const style = StyleSheet.create({
     backgroundColor: '#E86225',
     height: 16,
     width: 16,
-    marginLeft: 71,
+    marginLeft: '77%',
     marginRight: 8.67,
     marginTop: 8,
     marginBottom: 78,
