@@ -87,7 +87,11 @@ const Home = ({navigation}: HomeProps) => {
     </ScrollView>
   );
 };
+<<<<<<< HEAD
+//test 1
+=======
 //retain
+>>>>>>> 9a948231714ba612fd36321fcece65f4a7156b16
 const style = StyleSheet.create({
   container: {
     marginHorizontal: 24,
